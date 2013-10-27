@@ -1,7 +1,8 @@
 ﻿namespace FF_TRPG_ClassLibrary
 {
     /// <summary>
-    /// Base class for Magic and Techniques
+    /// Base class for Magic and Techniques.
+    /// This class should implement interfaces that would allow it to be bestowed on a monster or character.
     /// </summary>
     public class Skill
     {
@@ -19,7 +20,9 @@
     /// <remarks>
     /// This serves as the base for all spells. 
     /// The primary effect of any spell is considered to be damage. 
+    /// 
     /// </remarks>
+    /// 
     public class Magic : Skill
     {
         public MagicSchoolType SpellMagicSchoolType;
@@ -36,8 +39,9 @@
         /// <param name="spellmagiceffecttype">School of magic the spell falls under.</param>
         /// <param name="spellelementtype">Elemental effect of the spell.</param>
         /// <param name="spelleffecttype">Main effect type of the spell.</param>
-        public Magic(string name, int cost, string description, int potency, double accuracy,
-            MagicSchoolType spellmagiceffecttype, ElementType spellelementtype, EffectType spelleffecttype)
+        public Magic(string name = "", int cost = 0, string description = "", int potency = 0, double accuracy = 0,
+            MagicSchoolType spellmagiceffecttype = MagicSchoolType.Black, ElementType spellelementtype = ElementType.Light,
+            EffectType spelleffecttype = EffectType.Damage)
         {
             Name = name;
             Cost = cost;
@@ -46,18 +50,17 @@
             Accuracy = accuracy;
             SpellMagicSchoolType = spellmagiceffecttype;
             SpellElementType = spellelementtype;
+            SkillEffectType = spelleffecttype;
         }
 
-        public Magic()
+        public string ReturnTextOutput()
         {
-            Name = "";
-            Cost = 0;
-            Description = "";
-            Potency = 0;
-            Accuracy = 0;
-            SkillEffectType = EffectType.Damage;
-            SpellMagicSchoolType = MagicSchoolType.Black;
-            SpellElementType = ElementType.Void;
+            string x = SpellMagicSchoolType.ToString();
+
+            return "Name: " + Name.ToString() + "\n" + "Cost: " + Cost.ToString() + " mp\n"
+                + "Description: " + Description.ToString() + "\n" + "Potency: " + Potency.ToString() + "\n"
+                + "Accuracy: " + Accuracy.ToString() + "\n" + "Magic School: " + SpellMagicSchoolType.ToString() + "\n"
+                + "Element: " + SpellElementType.ToString() + "\n" + "Effect Type: " + SkillEffectType.ToString() + "\n";
         }
 
     }

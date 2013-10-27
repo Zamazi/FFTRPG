@@ -17,5 +17,14 @@ namespace FF_TRPG_Magic_And_Techniques
         {
             InitializeComponent();
         }
+
+        private void PrintSpell_Click(object sender, EventArgs e)
+        {
+            Magic SpellForOutput = new Magic(name: Nametextbox.Text, cost: (int)CostnumericUpDown.Value,
+                accuracy: (int)AccuracynumericUpDown.Value, potency: (int)PotencynumericUpDown.Value);
+
+            OutputBox.Text = SpellForOutput.ReturnTextOutput();
+
+        }
     }
 }

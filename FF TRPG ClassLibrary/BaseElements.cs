@@ -13,7 +13,7 @@
     /// Time: FFXII Time Magic
     /// Summon: FF Summon Magic
     ///</remarks>
-    public enum MagicSchoolType { White, Black, Green, Blue, Dark, Time, Summon }
+    public enum MagicSchoolType { White = 0, Black = 1, Green = 2, Blue = 3, Dark = 4, Time = 5, Summon = 6 }
 
     /// <summary>
     /// Core element types
