@@ -53,6 +53,10 @@
             SkillEffectType = spelleffecttype;
         }
 
+        /// <summary>
+        /// Converts the spell in question to a string
+        /// </summary>
+        /// <returns>Formatted with new lines and colons. </returns>
         public string ReturnTextOutput()
         {
             string x = SpellMagicSchoolType.ToString();

@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseElements.cs" />
+    <Compile Include="EnumsAndGlobals.cs" />
     <Compile Include="Effect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SkillClassDefinition.cs" />

@@ -1,9 +1,6 @@
 ﻿namespace FF_TRPG_ClassLibrary
 {
-    /// <summary>
-    /// Base class for a status.
-    /// </summary>
-    /// <remarks>
+    /// <summary><remarks>
     /// All statuses are hardcoded. They can only be changed by altering the code. This class
     /// defines the base class from which all other statuses must be derived.
     /// </remarks>
@@ -12,13 +9,15 @@
         public string Name;
         public int Potency;
         public string Description;
-
     }
 
     /* TODO: Wiki list of statuses:
     Positive Status Enhancements
      
-    Blink/Image - Avoid physical attacks for some turns.
+    Blink/Image - 
+    /// Base class for a status.
+    /// </summary>
+    /// Avoid physical attacks for some turns.
     Bravery - Has a different effect based on the game. In Final Fantasy XII and Final Fantasy XIII it increases physical attack power, while in Final Fantasy Tactics it is a measure for some attacks' power rather than a status effect.
     Clear - Physical attack immunity, but 100% magic hit rate and loss of magical enhancements.
     Faith - Similar to Bravery, only it affects the potency of, and vulnerability to, magic in Final Fantasy Tactics, or magic power Final Fantasy XII and Final Fantasy XIII.

@@ -38,6 +38,10 @@
             this.AccuracynumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.OutputBox = new System.Windows.Forms.RichTextBox();
             this.PrintSpell = new System.Windows.Forms.Button();
+            this.DescriptionrichTextBox = new System.Windows.Forms.RichTextBox();
+            this.DescriptionLabel = new System.Windows.Forms.Label();
+            this.SkillEffectTypecomboBox = new System.Windows.Forms.ComboBox();
+            this.EffectTypeDropdownlabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CostnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PotencynumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AccuracynumericUpDown)).BeginInit();
@@ -77,7 +81,7 @@
             // 
             this.AccuracyLabel.AutoSize = true;
             this.AccuracyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccuracyLabel.Location = new System.Drawing.Point(3, 84);
+            this.AccuracyLabel.Location = new System.Drawing.Point(10, 84);
             this.AccuracyLabel.Name = "AccuracyLabel";
             this.AccuracyLabel.Size = new System.Drawing.Size(70, 17);
             this.AccuracyLabel.TabIndex = 3;
@@ -129,11 +133,51 @@
             this.PrintSpell.UseVisualStyleBackColor = true;
             this.PrintSpell.Click += new System.EventHandler(this.PrintSpell_Click);
             // 
+            // DescriptionrichTextBox
+            // 
+            this.DescriptionrichTextBox.Location = new System.Drawing.Point(79, 181);
+            this.DescriptionrichTextBox.Name = "DescriptionrichTextBox";
+            this.DescriptionrichTextBox.Size = new System.Drawing.Size(195, 68);
+            this.DescriptionrichTextBox.TabIndex = 10;
+            this.DescriptionrichTextBox.Text = "";
+            // 
+            // DescriptionLabel
+            // 
+            this.DescriptionLabel.AutoSize = true;
+            this.DescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescriptionLabel.Location = new System.Drawing.Point(76, 161);
+            this.DescriptionLabel.Name = "DescriptionLabel";
+            this.DescriptionLabel.Size = new System.Drawing.Size(83, 17);
+            this.DescriptionLabel.TabIndex = 11;
+            this.DescriptionLabel.Text = "Description:";
+            // 
+            // SkillEffectTypecomboBox
+            // 
+            this.SkillEffectTypecomboBox.FormattingEnabled = true;
+            this.SkillEffectTypecomboBox.Location = new System.Drawing.Point(79, 111);
+            this.SkillEffectTypecomboBox.Name = "SkillEffectTypecomboBox";
+            this.SkillEffectTypecomboBox.Size = new System.Drawing.Size(121, 21);
+            this.SkillEffectTypecomboBox.TabIndex = 12;
+            // 
+            // EffectTypeDropdownlabel
+            // 
+            this.EffectTypeDropdownlabel.AutoSize = true;
+            this.EffectTypeDropdownlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EffectTypeDropdownlabel.Location = new System.Drawing.Point(25, 112);
+            this.EffectTypeDropdownlabel.Name = "EffectTypeDropdownlabel";
+            this.EffectTypeDropdownlabel.Size = new System.Drawing.Size(48, 17);
+            this.EffectTypeDropdownlabel.TabIndex = 13;
+            this.EffectTypeDropdownlabel.Text = "Effect:";
+            // 
             // MainEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 261);
+            this.ClientSize = new System.Drawing.Size(560, 261);
+            this.Controls.Add(this.EffectTypeDropdownlabel);
+            this.Controls.Add(this.SkillEffectTypecomboBox);
+            this.Controls.Add(this.DescriptionLabel);
+            this.Controls.Add(this.DescriptionrichTextBox);
             this.Controls.Add(this.PrintSpell);
             this.Controls.Add(this.OutputBox);
             this.Controls.Add(this.AccuracynumericUpDown);
@@ -166,6 +210,10 @@
         private System.Windows.Forms.NumericUpDown AccuracynumericUpDown;
         private System.Windows.Forms.RichTextBox OutputBox;
         private System.Windows.Forms.Button PrintSpell;
+        private System.Windows.Forms.RichTextBox DescriptionrichTextBox;
+        private System.Windows.Forms.Label DescriptionLabel;
+        private System.Windows.Forms.ComboBox SkillEffectTypecomboBox;
+        private System.Windows.Forms.Label EffectTypeDropdownlabel;
     }
 }
 

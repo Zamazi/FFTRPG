@@ -16,13 +16,22 @@ namespace FF_TRPG_Magic_And_Techniques
         public MainEntry()
         {
             InitializeComponent();
+            SkillEffectTypecomboBox.DataSource = Enum.GetNames(typeof(EffectType));
         }
 
         private void PrintSpell_Click(object sender, EventArgs e)
         {
-            Magic SpellForOutput = new Magic(name: Nametextbox.Text, cost: (int)CostnumericUpDown.Value,
-                accuracy: (int)AccuracynumericUpDown.Value, potency: (int)PotencynumericUpDown.Value);
+            EffectType temp;
+            Enum.TryParse<EffectType>(SkillEffectTypecomboBox.SelectedItem.ToString(), out temp);
 
+            
+
+            Magic SpellForOutput = new Magic(name: Nametextbox.Text, cost: (int)CostnumericUpDown.Value,
+                accuracy: (int)AccuracynumericUpDown.Value, potency: (int)PotencynumericUpDown.Value,
+                spelleffecttype: (EffectType)Enum.Parse(typeof(EffectType),SkillEffectTypecomboBox.SelectedItem.ToString()),
+                description: (string)DescriptionrichTextBox.Text
+                );
+            
             OutputBox.Text = SpellForOutput.ReturnTextOutput();
 
         }
