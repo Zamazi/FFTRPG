@@ -36,11 +36,11 @@
         /// <param name="description">Detailed Description of the Spell. Should not include Flavor Text.</param>
         /// <param name="potency">Numerical modifier for primary effect of spell.</param>
         /// <param name="accuracy">Base accuracy of the spell.</param>
-        /// <param name="spellmagiceffecttype">School of magic the spell falls under.</param>
+        /// <param name="spellmagicschooltype">School of magic the spell falls under.</param>
         /// <param name="spellelementtype">Elemental effect of the spell.</param>
         /// <param name="spelleffecttype">Main effect type of the spell.</param>
         public Magic(string name = "", int cost = 0, string description = "", int potency = 0, double accuracy = 0,
-            MagicSchoolType spellmagiceffecttype = MagicSchoolType.Black, ElementType spellelementtype = ElementType.Light,
+            MagicSchoolType spellmagicschooltype = MagicSchoolType.Black, ElementType spellelementtype = ElementType.Light,
             EffectType spelleffecttype = EffectType.Damage)
         {
             Name = name;
@@ -48,7 +48,7 @@
             Description = description;
             Potency = potency;
             Accuracy = accuracy;
-            SpellMagicSchoolType = spellmagiceffecttype;
+            SpellMagicSchoolType = spellmagicschooltype;
             SpellElementType = spellelementtype;
             SkillEffectType = spelleffecttype;
         }

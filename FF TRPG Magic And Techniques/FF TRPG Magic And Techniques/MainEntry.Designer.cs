@@ -42,6 +42,10 @@
             this.DescriptionLabel = new System.Windows.Forms.Label();
             this.SkillEffectTypecomboBox = new System.Windows.Forms.ComboBox();
             this.EffectTypeDropdownlabel = new System.Windows.Forms.Label();
+            this.Elementlabel = new System.Windows.Forms.Label();
+            this.MagicElementcombobox = new System.Windows.Forms.ComboBox();
+            this.MagicSchoollabel = new System.Windows.Forms.Label();
+            this.MagicSchoolcombobox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.CostnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PotencynumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AccuracynumericUpDown)).BeginInit();
@@ -81,7 +85,7 @@
             // 
             this.AccuracyLabel.AutoSize = true;
             this.AccuracyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccuracyLabel.Location = new System.Drawing.Point(10, 84);
+            this.AccuracyLabel.Location = new System.Drawing.Point(3, 84);
             this.AccuracyLabel.Name = "AccuracyLabel";
             this.AccuracyLabel.Size = new System.Drawing.Size(70, 17);
             this.AccuracyLabel.TabIndex = 3;
@@ -135,7 +139,7 @@
             // 
             // DescriptionrichTextBox
             // 
-            this.DescriptionrichTextBox.Location = new System.Drawing.Point(79, 181);
+            this.DescriptionrichTextBox.Location = new System.Drawing.Point(79, 223);
             this.DescriptionrichTextBox.Name = "DescriptionrichTextBox";
             this.DescriptionrichTextBox.Size = new System.Drawing.Size(195, 68);
             this.DescriptionrichTextBox.TabIndex = 10;
@@ -145,7 +149,7 @@
             // 
             this.DescriptionLabel.AutoSize = true;
             this.DescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescriptionLabel.Location = new System.Drawing.Point(76, 161);
+            this.DescriptionLabel.Location = new System.Drawing.Point(76, 203);
             this.DescriptionLabel.Name = "DescriptionLabel";
             this.DescriptionLabel.Size = new System.Drawing.Size(83, 17);
             this.DescriptionLabel.TabIndex = 11;
@@ -156,24 +160,65 @@
             this.SkillEffectTypecomboBox.FormattingEnabled = true;
             this.SkillEffectTypecomboBox.Location = new System.Drawing.Point(79, 111);
             this.SkillEffectTypecomboBox.Name = "SkillEffectTypecomboBox";
-            this.SkillEffectTypecomboBox.Size = new System.Drawing.Size(121, 21);
+            this.SkillEffectTypecomboBox.Size = new System.Drawing.Size(100, 21);
             this.SkillEffectTypecomboBox.TabIndex = 12;
             // 
             // EffectTypeDropdownlabel
             // 
             this.EffectTypeDropdownlabel.AutoSize = true;
             this.EffectTypeDropdownlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EffectTypeDropdownlabel.Location = new System.Drawing.Point(25, 112);
+            this.EffectTypeDropdownlabel.Location = new System.Drawing.Point(24, 112);
             this.EffectTypeDropdownlabel.Name = "EffectTypeDropdownlabel";
             this.EffectTypeDropdownlabel.Size = new System.Drawing.Size(48, 17);
             this.EffectTypeDropdownlabel.TabIndex = 13;
             this.EffectTypeDropdownlabel.Text = "Effect:";
             // 
+            // Elementlabel
+            // 
+            this.Elementlabel.AutoSize = true;
+            this.Elementlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Elementlabel.Location = new System.Drawing.Point(12, 165);
+            this.Elementlabel.Name = "Elementlabel";
+            this.Elementlabel.Size = new System.Drawing.Size(63, 17);
+            this.Elementlabel.TabIndex = 15;
+            this.Elementlabel.Text = "Element:";
+            // 
+            // MagicElementcombobox
+            // 
+            this.MagicElementcombobox.FormattingEnabled = true;
+            this.MagicElementcombobox.Location = new System.Drawing.Point(79, 165);
+            this.MagicElementcombobox.Name = "MagicElementcombobox";
+            this.MagicElementcombobox.Size = new System.Drawing.Size(100, 21);
+            this.MagicElementcombobox.TabIndex = 14;
+            // 
+            // MagicSchoollabel
+            // 
+            this.MagicSchoollabel.AutoSize = true;
+            this.MagicSchoollabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MagicSchoollabel.Location = new System.Drawing.Point(18, 139);
+            this.MagicSchoollabel.Name = "MagicSchoollabel";
+            this.MagicSchoollabel.Size = new System.Drawing.Size(55, 17);
+            this.MagicSchoollabel.TabIndex = 17;
+            this.MagicSchoollabel.Text = "School:";
+            // 
+            // MagicSchoolcombobox
+            // 
+            this.MagicSchoolcombobox.FormattingEnabled = true;
+            this.MagicSchoolcombobox.Location = new System.Drawing.Point(79, 138);
+            this.MagicSchoolcombobox.Name = "MagicSchoolcombobox";
+            this.MagicSchoolcombobox.Size = new System.Drawing.Size(100, 21);
+            this.MagicSchoolcombobox.TabIndex = 16;
+            // 
             // MainEntry
             // 
+            this.AcceptButton = this.PrintSpell;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 261);
+            this.ClientSize = new System.Drawing.Size(560, 321);
+            this.Controls.Add(this.MagicSchoollabel);
+            this.Controls.Add(this.MagicSchoolcombobox);
+            this.Controls.Add(this.Elementlabel);
+            this.Controls.Add(this.MagicElementcombobox);
             this.Controls.Add(this.EffectTypeDropdownlabel);
             this.Controls.Add(this.SkillEffectTypecomboBox);
             this.Controls.Add(this.DescriptionLabel);
@@ -214,6 +259,10 @@
         private System.Windows.Forms.Label DescriptionLabel;
         private System.Windows.Forms.ComboBox SkillEffectTypecomboBox;
         private System.Windows.Forms.Label EffectTypeDropdownlabel;
+        private System.Windows.Forms.Label Elementlabel;
+        private System.Windows.Forms.ComboBox MagicElementcombobox;
+        private System.Windows.Forms.Label MagicSchoollabel;
+        private System.Windows.Forms.ComboBox MagicSchoolcombobox;
     }
 }
 
