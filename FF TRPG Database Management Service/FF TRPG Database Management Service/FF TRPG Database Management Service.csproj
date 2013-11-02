@@ -42,6 +42,12 @@
     <Compile Include="DatabaseManagementService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FF TRPG ClassLibrary\FF TRPG ClassLibrary.csproj">
+      <Project>{31a4cb46-366d-4048-b76e-c2aaa37b5839}</Project>
+      <Name>FF TRPG ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

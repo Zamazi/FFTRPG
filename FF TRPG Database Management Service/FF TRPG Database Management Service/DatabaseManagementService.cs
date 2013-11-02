@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using FF_TRPG_ClassLibrary;
 
 namespace FF_TRPG_Database_Management_Service
 {
@@ -13,12 +14,23 @@ namespace FF_TRPG_Database_Management_Service
     /// </summary>
     public class TRPG_Database
     {
+        const string start_item_tag = "<trpg_item>";
+        const string close_item_tag = "</trpg_item>";
+        const string item_number_tag = "<trpg_key=";
+
+        const string start_magic_section_tag = "<trpg_magicsec>";
+        const string close_magic_section_tag = "</trpg_magicsec>";
+
         private string _filepath; //bath to database file
-        private int _magiccategorystartindex
+        private int _magiccategorystartindex;
+        private int _magiccategorynextindex;
+
+        private FileStream streamcontrol;
 
         public void OpenConnection()
         {
-            StreamReader openConnectionReader = new StreamReader(_filepath);
+            streamcontrol = new FileStream(_filepath, FileMode.OpenOrCreate,
+                FileAccess.ReadWrite, FileShare.None);
 
             /*
              * opens connection to a database.
@@ -32,14 +44,14 @@ namespace FF_TRPG_Database_Management_Service
              * 
              * key numbers are seperated by database categories, ie magic, skills, monsters, ect.
              * 
-             * index in the database refers to the number at which the 
+             * index in the database refers to the number at which the magic category starts
              */
 
         }
 
-        public void WriteMagicToDabase()
+        public void WriteMagicToDabase(Magic magictowrite)
         {
-            
+           
         }
 
         public void OpenConnection(string filepath)
