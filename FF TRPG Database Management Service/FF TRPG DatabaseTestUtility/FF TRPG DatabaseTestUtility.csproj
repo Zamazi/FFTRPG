@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C7B900C0-DE60-4E0B-8BD0-20CE8B912990}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{3B758458-61CE-4B85-A252-FDA2A281CDBA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FF_TRPG_Database_Management_Service</RootNamespace>
-    <AssemblyName>FF TRPG Database Management Service</AssemblyName>
+    <RootNamespace>FF_TRPG_DatabaseTestUtility</RootNamespace>
+    <AssemblyName>FF TRPG DatabaseTestUtility</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,8 +34,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,13 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseManagementService.cs" />
+    <Compile Include="TestEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\FF TRPG ClassLibrary\FF TRPG ClassLibrary.csproj">
       <Project>{31a4cb46-366d-4048-b76e-c2aaa37b5839}</Project>
       <Name>FF TRPG ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FF TRPG Database Management Service\FF TRPG Database Management Service.csproj">
+      <Project>{c7b900c0-de60-4e0b-8bd0-20ce8b912990}</Project>
+      <Name>FF TRPG Database Management Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

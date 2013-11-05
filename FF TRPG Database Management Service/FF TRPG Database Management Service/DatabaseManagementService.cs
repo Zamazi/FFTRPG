@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using FF_TRPG_ClassLibrary;
 
 namespace FF_TRPG_Database_Management_Service
 {
@@ -13,12 +14,16 @@ namespace FF_TRPG_Database_Management_Service
     /// </summary>
     public class TRPG_Database
     {
-        private string _filepath; //bath to database file
-        private int _magiccategorystartindex
+        private string filepath; //bath to database file
+        private int magiccategorystartindex;
+        private int magiccategorynextindex;
+
+        private FileStream filestream;
 
         public void OpenConnection()
         {
-            StreamReader openConnectionReader = new StreamReader(_filepath);
+            filestream = new FileStream(filepath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+
 
             /*
              * opens connection to a database.
@@ -37,14 +42,27 @@ namespace FF_TRPG_Database_Management_Service
 
         }
 
-        public void WriteMagicToDabase()
+        public void CreateNewDatabase(string DatabaseName)
         {
-            
+            using (StreamWriter _streamwriter = new StreamWriter("..\\..\\TestData\\" + DatabaseName + ".TDB"))
+            {
+                Magic test = new Magic();
+                WriteMagicToDabase(test);
+                filepath = ((FileStream)(_streamwriter.BaseStream)).Name;
+            }
         }
 
-        public void OpenConnection(string filepath)
+        public void WriteMagicToDabase(Magic MagicToWrite)
         {
-            _filepath = filepath;
+            using (StreamWriter _streamwriter = new StreamWriter(filepath))
+            {
+                _streamwriter.WriteLine(MagicToWrite.ReturnTextOutput());
+            }
+        }
+
+        public void OpenConnection(string FilepathIn)
+        {
+            filepath = FilepathIn;
             OpenConnection();
         }
     }

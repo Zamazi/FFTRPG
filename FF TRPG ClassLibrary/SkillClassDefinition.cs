@@ -59,8 +59,6 @@
         /// <returns>Formatted with new lines and colons. </returns>
         public string ReturnTextOutput()
         {
-            string x = SpellMagicSchoolType.ToString();
-
             return "Name: " + Name.ToString() + "\n" + "Cost: " + Cost.ToString() + " mp\n"
                 + "Description: " + Description.ToString() + "\n" + "Potency: " + Potency.ToString() + "\n"
                 + "Accuracy: " + Accuracy.ToString() + "\n" + "Magic School: " + SpellMagicSchoolType.ToString() + "\n"
