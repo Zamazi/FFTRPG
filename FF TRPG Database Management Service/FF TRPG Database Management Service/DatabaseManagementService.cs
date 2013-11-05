@@ -46,10 +46,11 @@ namespace FF_TRPG_Database_Management_Service
         {
             using (StreamWriter _streamwriter = new StreamWriter("..\\..\\TestData\\" + DatabaseName + ".TDB"))
             {
-                Magic test = new Magic();
-                WriteMagicToDabase(test);
                 filepath = ((FileStream)(_streamwriter.BaseStream)).Name;
+        
             }
+            Magic test = new Magic();      
+            WriteMagicToDabase(test);
         }
 
         public void WriteMagicToDabase(Magic MagicToWrite)
